@@ -40,7 +40,10 @@ classical.searchAll('饿死', function (results) {
 ```
 ##Currently available texts:
 
-'laozi' - The Dao De Jing (aka Tao Te Qing). A warring states era text on philosophy and statecraft.
-'zhuangzi' - The Zhuangzi is another warring states era text, very rich and colorful in its language.
-'dufu' - The complete works of the Tang poet Du Fu.
-'libai' - Complete works of Tang poet Li Bai.
+'laozi' - The Dao De Jing (aka Tao Te Qing). A warring states era text on philosophy and statecraft.    
+'zhuangzi' - The Zhuangzi is another warring states era text, very rich and colorful in its language.    
+'dufu' - The complete works of the Tang poet Du Fu.    
+'libai' - Complete works of Tang poet Li Bai.    
+
+###License
+MIT
