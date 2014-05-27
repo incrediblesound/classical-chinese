@@ -1,6 +1,6 @@
 {
     "name": "classical-chinese",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "description": "Classical Chinese literature in JavaScript",
     "main": "main.js",
     "author": "James H. Edwards",
@@ -8,7 +8,7 @@
     "license":"MIT",
     "repository" : {
         "type": "git",
-        "url": "https://github.com/incrediblesound/classical"
+        "url": "https://github.com/incrediblesound/classical-chinese"
     },
     "engines": { "node": "*" }
 }

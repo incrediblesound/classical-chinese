@@ -48,6 +48,25 @@ exports.getText = function(text, chapter, cb) {
   return cb(result);	
 };
 
+exports.concordance = function(text, cb) {
+  var results = {};
+  forEach(database[text], function (part) {
+    forEach(part.body, function (line) {
+      forEach(line, function (character) {
+        if(!(character in results)) {
+          results[character] = [];
+          results[character].push(line);
+        } else {
+          if(results[character].indexOf(line) == -1) {
+            results[character].push(line);
+          }
+        }
+      });
+    });
+  });
+  return cb(results)
+}
+
 exports.getTitles = function(text, cb) {
   var result = [];
   forEach(database[text], function (section) {
@@ -69,7 +88,7 @@ function getChars(data, chars, cb) {
 		body = section.body;
 			forEach(body, function (line) {
 				if(line.indexOf(chars) !== -1) {
-				results.push({matchTitle: section.title, matchLine: line});
+				results.push({section: section.title, line: line});
 			}
 		});
 	});
@@ -103,5 +122,23 @@ var lib = {
               data = JSON.parse(data);
               cb(data);
             })
-  } 
+            },
+  lunyu: function(cb) {
+            fs.readFile('./node_modules/classical-chinese/lunyu.json', function(err, data) {
+            data = JSON.parse(data);
+            cb(data);
+          })
+          },
+  sunzi: function(cb) {
+            fs.readFile('./node_modules/classical-chinese/sunzi.json', function(err, data) {
+            data = JSON.parse(data);
+            cb(data);
+          })
+        },
+  mengzi: function(cb) {
+            fs.readFile('./node_modules/classical-chinese/mengzi.json', function(err, data) {
+            data = JSON.parse(data);
+            cb(data);
+          })
+        }
 };
