@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="./texts/laozi.js"></script>
+    <script src="./texts/lunyu.js"></script>
+    <script src="./texts/sunzi.js"></script>
+    <script src="./texts/zhuangzi.js"></script>
+    <script src="./texts/dufu.js"></script>
+    <script src="./texts/libai.js"></script>
+    <script src="./texts/mengzi.js"></script>
+  </head>
+  <body>
+    <style>
+    a {
+      cursor: pointer;
+    }
+    button {
+      border-radius: 3px;
+      margin: 5px 3px;
+    }
+    .layout {
+      display: inline-block;
+    }
+    .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+    }
+    .select-btn {
+      display: inline-block;
+    }
+    .left-box {
+      position: absolute;
+      left: 0;
+      width: 300px;
+    }
+    .right-box {
+      position: absolute;
+      right: 0;
+      padding: 5px;
+      border: solid 1px #999;
+      border-radius: 3px;
+      height: 90vh;
+      overflow: scroll;
+      left: 310px;
+    }
+    </style>
+    <div class="container">
+      <div class="layout left-box">
+        <div>
+          <input name="search" placeholder="enter search term" id="search-field">
+        </div>
+        <button id="search-button">Search Current</button>
+        <button id="search-all-button">Search All</button>
+      </div>
+      <div class="layout right-box"></div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
